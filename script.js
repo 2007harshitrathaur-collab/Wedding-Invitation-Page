@@ -56,3 +56,39 @@ rsvpForm.addEventListener("submit", function (event) {
   const email = document.getElementById("guestEmail").value.trim();
   const attendance = document.getElementById("attendance").value;
   const guests = document.getElementById("guests").value;
+
+  // Clear old messages before checking the new submission.
+  document.querySelectorAll(".error").forEach(function (message) {
+    message.textContent = "";
+  });
+  formStatus.textContent = "";
+
+  let isValid = true;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name.length < 2) {
+    document.getElementById("nameError").textContent = "Please enter a name with at least 2 characters.";
+    isValid = false;
+  }
+  if (!emailPattern.test(email)) {
+    document.getElementById("emailError").textContent = "Please enter a valid email address.";
+    isValid = false;
+  }
+  if (attendance === "") {
+    document.getElementById("attendanceError").textContent = "Please choose your response.";
+    isValid = false;
+  }
+  if (guests === "") {
+    document.getElementById("guestsError").textContent = "Please select the number of guests.";
+    isValid = false;
+  }
+
+  if (isValid) {
+    const guestMessage = attendance === "joyfully-attending"
+      ? "We look forward to celebrating with you!"
+      : "Thank you for letting us know. You will be missed!";
+    formStatus.textContent = "Thank you, " + name + "! " + guestMessage;
+    rsvpForm.reset();
+  }
+});
+
