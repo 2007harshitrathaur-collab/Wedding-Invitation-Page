@@ -15,3 +15,18 @@ navigation.querySelectorAll("a").forEach(function (link) {
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+// Gallery modal: show a larger version of the selected photograph.
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+
+galleryItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    lightboxImage.src = item.dataset.full;
+    lightboxImage.alt = item.querySelector("img").alt;
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+  });
+});
