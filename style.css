@@ -1,1 +1,13 @@
-
+/* GROUP 11 | PROJECT #39 | WEDDING INVITATION PAGE */
+:root {
+  --cream: #f8f4ec;
+  --paper: #fffdf8;
+  --ink: #30251f;
+  --muted: #82766a;
+  --gold: #ad8954;
+  --gold-light: #d9c49f;
+  --wine: #743d43;
+  --line: #e8dfd1;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
