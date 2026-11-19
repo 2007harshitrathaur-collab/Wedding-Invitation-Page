@@ -30,3 +30,29 @@ galleryItems.forEach(function (item) {
     lightbox.setAttribute("aria-hidden", "false");
   });
 });
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", function (event) {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") closeLightbox();
+});
+
+// RSVP form: validate each required field before showing confirmation.
+const rsvpForm = document.getElementById("rsvpForm");
+const formStatus = document.getElementById("formStatus");
+
+rsvpForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("guestName").value.trim();
+  const email = document.getElementById("guestEmail").value.trim();
+  const attendance = document.getElementById("attendance").value;
+  const guests = document.getElementById("guests").value;
