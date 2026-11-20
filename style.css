@@ -57,3 +57,256 @@ body {
    font-style: italic;
    }
 
+nav {
+   display: flex;
+    align-items: center; 
+    gap: 34px;
+   }
+
+nav a {
+   text-decoration: none; 
+   color: var(--ink); 
+   font-size: 11px; 
+   letter-spacing: 1.5px; 
+   text-transform: uppercase; 
+   transition: color .25s; 
+  }
+
+nav a:hover {
+   color: var(--gold);
+   }
+
+nav .nav-cta {
+   border: 1px solid var(--gold); 
+   padding: 11px 21px; 
+   color: var(--wine); 
+  }
+
+.menu-toggle {
+   display: none; 
+   border: 0; 
+   background: none; 
+   font-size: 25px; 
+   color: var(--wine); 
+  }
+
+.hero {
+   min-height: 690px;
+   padding: 105px 20px 90px;
+   position: relative; 
+   overflow: hidden; 
+   text-align: center; 
+   display: flex; 
+   flex-direction: column; 
+   align-items: center; 
+   justify-content: center; 
+   background: radial-gradient(ellipse at 50% 40%, #fffdf8 0%, #f8f2e8 66%, #f1e8d9 100%); 
+  }
+
+.hero:before, .hero:after {
+   content: ""; 
+   position: absolute; 
+   width: 300px; 
+   height: 300px; 
+   border: 1px solid rgba(173,137,84,.28); 
+   border-radius: 50%; 
+  }
+
+.hero:before {
+   left: -190px; 
+   top: 70px; 
+   box-shadow: 0 0 0 18px rgba(173,137,84,.035), 0 0 0 38px rgba(173,137,84,.025); 
+  }
+
+.hero:after {
+   right: -190px; bottom: 20px;
+    box-shadow: 0 0 0 18px rgba(173,137,84,.035), 0 0 0 38px rgba(173,137,84,.025); 
+  }
+
+.eyebrow { 
+  color: var(--gold); 
+  font-size: 10px; 
+  letter-spacing: 3px; 
+  font-weight: 600; 
+  margin: 0 0 17px; 
+}
+
+.small-script {
+   color: var(--wine); 
+   font: italic 24px var(--serif); 
+   margin: 10px 0 0; 
+  }
+
+.hero h1 {
+   font: 500 clamp(55px, 8vw, 94px)/.88 var(--serif); 
+   letter-spacing: -2px; 
+   margin: 23px 0 20px; 
+  }
+
+h1 em, h2 em { 
+  color: var(--wine); 
+  font-weight: 400; 
+}
+
+.ornament { 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  color: var(--gold); 
+  margin: 12px 0 30px; 
+}
+
+.ornament span { 
+  width: 48px; 
+  height: 1px; 
+  background: var(--gold-light); 
+}
+
+.couple-pair { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 40px; 
+  margin: 4px 0 27px; 
+}
+
+.couple-pair h2 { 
+  font: 500 clamp(28px, 4vw, 42px) var(--serif); 
+  margin: 7px 0; 
+}
+
+.couple-pair h2 i { 
+  color: var(--gold); 
+  font-weight: 400; 
+}
+
+.role { 
+  font-size: 8px; 
+  letter-spacing: 2px; 
+  color: var(--muted); 
+}
+
+.pair-divider { 
+  color: var(--gold); 
+  font-size: 25px; 
+}
+
+.hero-date { 
+  font-size: 9px; 
+  letter-spacing: 2.5px; 
+  color: var(--muted); 
+  margin: 0 0 28px; 
+}
+
+.outline-button { 
+  text-decoration: none; 
+  border: 1px solid var(--gold); 
+  color: var(--wine); 
+  padding: 14px 22px; 
+  font-size: 10px; 
+  letter-spacing: 1.2px; 
+  text-transform: uppercase; 
+  transition: .25s; 
+}
+
+.outline-button:hover { 
+  background: var(--wine); 
+  color: white; 
+  border-color: var(--wine); 
+}
+
+.outline-button span { 
+  margin-left: 13px; 
+}
+
+.hero-corner { 
+  position: absolute; 
+  color: rgba(173,137,84,.42); 
+  font: 100px var(--serif); 
+}
+
+.corner-left { 
+  left: 5%; 
+  bottom: 5%; 
+  transform: rotate(-35deg); 
+}
+
+.corner-right { 
+  right: 5%; 
+  top: 5%; 
+  transform: rotate(145deg); 
+}
+
+.section { 
+  padding: 105px 8%; 
+  text-align: center; 
+}
+
+.section h2 { 
+  font: 500 clamp(42px, 5vw, 60px)/.98 var(--serif); 
+  margin: 0 0 20px; 
+}
+
+.intro { 
+  max-width: 900px; 
+  margin: auto; 
+}
+
+.intro-copy { 
+  max-width: 600px; 
+  margin: 25px auto 20px; 
+  color: var(--muted); 
+  font: 16px/1.9 var(--serif); 
+}
+
+.signature { 
+  font: italic 24px var(--serif); 
+  color: var(--wine); 
+  margin-top: 22px; 
+}
+
+.events { 
+  background: var(--cream); 
+}
+
+.section-note { 
+  color: var(--muted); 
+  font: 16px var(--serif); 
+  margin: 0 auto 48px; 
+}
+
+.event-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  max-width: 1100px; 
+  margin: auto; 
+  gap: 18px; 
+  text-align: left; 
+}
+
+.event-card { 
+  background: var(--paper); 
+  padding: 34px 28px; 
+  border: 1px solid var(--line); 
+  position: relative; 
+}
+
+.event-card.featured { 
+  border-color: var(--gold); 
+  transform: translateY(-10px); 
+  box-shadow: 0 15px 45px rgba(69,48,29,.07); 
+}
+
+.event-icon { 
+  color: var(--gold); 
+  font-size: 27px; 
+  margin-bottom: 24px; 
+}
+
+.event-number { 
+  font-size: 8px; 
+  letter-spacing: 2px; 
+  color: var(--gold); 
+}
+
+
